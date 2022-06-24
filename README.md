@@ -1,4 +1,4 @@
-# create-svelte
+# Purpose
 
 Experimenting with Svelte
 
