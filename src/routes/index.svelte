@@ -1,10 +1,16 @@
 <script context="module">
+  import axios from "axios";
+
   const API_KEY = import.meta.env.VITE_API_KEY;
   const TMDB_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
 
-  export async function load({ fetch }) {
-    const res = await fetch(TMDB_URL);
-    const { results: popular } = await res.json();
+  // export async function load({ fetch, auth }) {
+  export async function load({ auth }) {
+    const {
+      data: { results: popular },
+    } = await axios(TMDB_URL);
+
+    console.log(auth);
 
     return {
       props: {

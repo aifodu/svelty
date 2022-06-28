@@ -1,3 +1,6 @@
+<!-- <script context="module">
+  import "../bootstrap.js";
+</script> -->
 <script>
   import "../app.css";
   import SearchBar from "../components/SearchBar.svelte";
